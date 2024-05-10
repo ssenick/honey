@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/_head.htm',{
+"title":"ГОЛОВНА"
+})
+
+<body>
+	<div id="preloader">
+		<span id="loader"></span>
+	</div>
+
+	<div class="wrapper">
+		@@include('html/_header.htm',{
+		"home":"_no-active",
+		"main":"active",
+		"gallery":"",
+		"menu":"",
+		"aboutUs":""
+		})
+		<main class="page page_home">
+
+			<section data-fullscreen class="page__main main-page ">
+				<div class="main-page__background-ibg">
+					<img src="@img/home-page/main/bg.jpg" alt="background iamge">
+				</div>
+
+				<div class="main-page__body body-main-page">
+					<div class="body-main-page__logo">
+						<img src="@img/logo-big.png" alt="big logo">
+					</div>
+					<div class="body-main-page__actions ">
+						<a href="menu.html" class="body-main-page__link button">МЕНЮ</a>
+						<a href="gallery.html" class="body-main-page__link button">ГАЛЕРЕЯ</a>
+					</div>
+					<div class="body-main-page__social social">
+						<a href="#" class="social__link"><img src="img/social-networks/instagram.png" alt="icon instagram"></a>
+						<a href="#" class="social__link"><img src="img/social-networks/facebook.png" alt="icon facebook"></a>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="page__about about-us">
+				<div class="about-us__container-about">
+					<div class="about-us__images">
+						<div class="about-us__image-ibg"><img src="@img/home-page/about-us/01.jpg" alt="image"></div>
+						<div class="about-us__image-ibg"><img src="@img/home-page/about-us/02.jpg" alt="image"></div>
+						<div class="about-us__image-ibg"><img src="@img/home-page/about-us/03.jpg" alt="image"></div>
+					</div>
+					<div class="about-us__body">
+						<h3 class="about-us__title">Про нас</h3>
+						<div class="about-us__logo"><img src="@img/home-page/about-us/logo.png" alt="image logo"></div>
+						<div class="about-us__text">
+							<p>Ресторан і тераса, розташовані в м. Ужгород по вулиці Капушанська, 59. Команда професіоналів, закоханних у свою справу привітно зустрінуть Вас і виконають будь-які побажання. Скуштувавши нашу кухню, Ви зрозумієте, що це не пусті слова. До ваших послуг затишний зал, бар, чудова тераса, зручна парковка, гриль, кальян та ще багато іншого.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section  class="page__menu-cards cards-menu">
+				<div class="cards-menu__container-about">
+					<div class="cards-menu__wrapper">
+						<a href="#" class="cards-menu__item item-card item-card_red">
+							<div class="item-card__image-ibg">
+								<img src="@img/home-page/cards-menu/01.jpg" alt="image menu">
+							</div>
+							<div class="item-card__body">
+								<h5 class="item-card__title">BAR</h5>
+								<span class="item-card__description">барне меню</span>
+								<span class="item-card__promp">переглянути</span>
+							</div>
+						</a>
+						<a href="#" class="cards-menu__item item-card item-card_yellow">
+							<div class="item-card__image-ibg">
+								<img src="@img/home-page/cards-menu/02.jpg" alt="image menu">
+							</div>
+							<div class="item-card__body">
+								<h5 class="item-card__title">WINE</h5>
+								<span class="item-card__description">винна карта</span>
+								<span class="item-card__promp">переглянути</span>
+							</div>
+						</a>
+						<a href="#" class="cards-menu__item item-card item-card_blue">
+							<div class="item-card__image-ibg">
+								<img src="@img/home-page/cards-menu/03.jpg" alt="image menu">
+							</div>
+							<div class="item-card__body">
+								<h5 class="item-card__title">MENU</h5>
+								<span class="item-card__description">основне меню</span>
+								<span class="item-card__promp">переглянути</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="page__propositions propositions">
+				<div class="propositions__image-ibg">
+					<img src="@img/home-page/propositions/background.jpg" alt="background image">
+				</div>
+				<div class="propositions__container-about">
+					<h3 class="propositions__title">Спеціальні пропозиції</h3>
+					<div class="propositions__wrapper">
+						<div class="propositions__slider slider-propositions swiper">
+							<div class="slider-propositions__wrapper swiper-wrapper">
+								<div class="slider-propositions__slide slide-propositions swiper-slide">
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-scale="1.2" data-swiper-parallax-x="10%" class="slide-propositions__image-ibg"><img src="@img/home-page/propositions/01.jpg" alt="slider image"></div>
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="-30%" class="slide-propositions__description">Отримай незабутні враження на вечірці <span>“Champange eve”</span></div>
+								</div>
+								<div class="slider-propositions__slide slide-propositions swiper-slide">
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="10%" data-swiper-parallax-scale="1.2" class="slide-propositions__image-ibg"><img src="@img/home-page/propositions/01.jpg" alt="slider image"></div>
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="-30%" class="slide-propositions__description"> Отримай незабутні враження на вечірці Отримай незабутні враження на вечірці <span>“Champange eve”</span></div>
+								</div>
+								<div class="slider-propositions__slide slide-propositions swiper-slide">
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="10%" data-swiper-parallax-scale="1.2" class="slide-propositions__image-ibg"><img src="@img/home-page/propositions/01.jpg" alt="slider image"></div>
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="-30%" class="slide-propositions__description">Отримай незабутні враження на вечірці <span>“Champange eve”</span></div>
+								</div>
+								<div class="slider-propositions__slide slide-propositions swiper-slide">
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="10%" data-swiper-parallax-scale="1.2" class="slide-propositions__image-ibg"><img src="@img/home-page/propositions/01.jpg" alt="slider image"></div>
+									<div data-swiper-parallax-opacity="0 " data-swiper-parallax-x="-30%" class="slide-propositions__description"> Отримай незабутні враження на вечірці Отримай незабутні враження на вечірці <span>“Champange eve”</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="propositions__controls controls-slider">
+							<button type="button" class="controls-slider__arrow swiper-button-prev"></button>
+							<button type="button" class="controls-slider__arrow swiper-button-next"></button>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="page__about-gallery gallery-about">
+				<div class="gallery-about__image-ibg">
+					<img src="@img/home-page/gallery-about/background.jpg" alt="image about gallery">
+				</div>
+				<a href="gallery.html" class="gallery-about__link link-gallery">
+					<div class="link-gallery__text">Галерея</div>
+					<div class="link-gallery__logo">
+						<img src="@img/logo.png" alt="image logo">
+					</div>
+				</a>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{
+		"home":"_no-active",
+		"main":"active",
+		"gallery":"",
+		"menu":"",
+		"aboutUs":""
+		})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

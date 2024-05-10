@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/_head.htm',{
+"title":"Honey МЕНЮ"
+})
+
+<body>
+	<div id="preloader">
+		<span id="loader"></span>
+	</div>
+	<div class="wrapper ">
+		@@include('html/_header.htm',{
+		"home":"",
+		"main":"",
+		"gallery":"",
+		"menu":"active",
+		"aboutUs":""
+		})
+		<main class="page page_menu">
+			<section class="page__menu honey-menu">
+				<div class="honey-menu__container">
+					<div  class="honey-menu__header">
+						<h1 class="honey-menu__title title-h1">HONEY MENU</h1>
+						<div class="honey-menu__subtitle">ОСНОВНЕ МЕНЮ</div>
+
+					</div>
+					<div class="honey-menu__body body-honey-menu">
+						<nav class="body-honey-menu__navigation navigation-menu">
+							<div class="navigation-menu__group group-nav-menu">
+								<div class="group-nav-menu__item">
+									<div class="group-nav-menu__label">ОСНОВНЕ МЕНЮ</div>
+									<ul class="group-nav-menu__list">
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link active">НОВИНКИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ЗАКУСКИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">САЛАТИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ФРЕШ-ПАСТИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ПЕРШІ СТРАВИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ГАРЯЧІ СТРАВИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ГАРНІРИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ФАСТ-ФУД</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ДЕСЕРТИ</a></li>
+									</ul>
+								</div>
+								<div class="group-nav-menu__item">
+									<div class="group-nav-menu__label">БАРНЕ МЕНЮ</div>
+									<ul class="group-nav-menu__list">
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link ">НОВИНКИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ПИВО</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">КОКТЕЙЛІ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">СЕЗОННІ НАПОЇ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">БЕЗАЛКОГОЛЬНІ КОКТЕЙЛІ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ФІРМОВІ НАСТОЯНКИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ШОТИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">БЕЗАЛКОГОЛЬНІ НАПОЇ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ФРЕШІ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ХОЛОДНИЙ ЧАЙ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">ХОЛОДНА КАВА</a></li>
+									</ul>
+								</div>
+								<div class="group-nav-menu__item">
+									<div class="group-nav-menu__label">ВИННА КАРТА</div>
+									<ul class="group-nav-menu__list">
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link ">НОВИНКИ</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">Білі Вина</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">Рожеві Вина</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">Червоні Вина</a></li>
+										<li class="group-nav-menu__item"><a href="#" class="group-nav-menu__link">Ігристі Вина</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<div  class="body-honey-menu__content  content-menu">
+							<div data-watch class="content-menu__line">
+								<button data-goto=".page" type="button" class="button-up"><img src="@img/icons/arrow-circl.svg" alt="image"></button>
+							</div>
+							<button type="button" class="content-menu__button">категорії<span class="content-menu__span"><span></span></span></button>
+							<button type="button" class="content-menu__button-fix">категорії<span class="content-menu__span"><span></span></span></button>
+							<div class="content-menu__wrapper">
+
+								<section class="content-menu__category category-menu">
+									<h3 class="category-menu__title">НОВИНКИ</h3>
+									<div class="category-menu__items">
+										<a href="#" data-popup="#popup" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Севіче з морської форелі</h5>
+													<div class="item-category-menu__description">З в'яленими томатами та сиром Шевре</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/01.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup_2" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Тапас м'ясний</h5>
+													<div class="item-category-menu__description">Буженина, запечена шия з пряними спеціями, телятина сім ароматів, курячий рулет з болгарським перцем</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/02.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Севіче з морської форелі</h5>
+													<div class="item-category-menu__description">З в'яленими томатами та сиром Шевре</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/03.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup_2" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Тапас м'ясний</h5>
+													<div class="item-category-menu__description">Буженина, запечена шия з пряними спеціями, телятина сім ароматів, курячий рулет з болгарським перцем</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/04.jpg" alt="image product">
+											</div>
+										</a>
+									</div>
+								</section>
+								<section class="content-menu__category category-menu">
+									<h3 class="category-menu__title">ЗАКУСКИ</h3>
+									<div class="category-menu__items">
+										<a href="#" data-popup="#popup" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Севіче з морської форелі</h5>
+													<div class="item-category-menu__description">З в'яленими томатами та сиром Шевре</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/01.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup_2" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Тапас м'ясний</h5>
+													<div class="item-category-menu__description">Буженина, запечена шия з пряними спеціями, телятина сім ароматів, курячий рулет з болгарським перцем</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/02.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Севіче з морської форелі</h5>
+													<div class="item-category-menu__description">З в'яленими томатами та сиром Шевре</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/03.jpg" alt="image product">
+											</div>
+										</a>
+										<a href="#" data-popup="#popup_2" class="category-menu__item item-category-menu">
+											<div class="item-category-menu__content">
+												<div class="item-category-menu__info">
+													<h5 class="item-category-menu__label">Тапас м'ясний</h5>
+													<div class="item-category-menu__description">Буженина, запечена шия з пряними спеціями, телятина сім ароматів, курячий рулет з болгарським перцем</div>
+													<div class="item-category-menu__weigth">Вага 130/40г</div>
+												</div>
+												<div class="item-category-menu__price">255,00 грн</div>
+											</div>
+											<div class="item-category-menu__image-ibg">
+												<img src="@img/menu-page/04.jpg" alt="image product">
+											</div>
+										</a>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</main>
+		@@include('html/_footer.htm',{
+		"home":"",
+		"main":"",
+		"gallery":"",
+		"menu":"active",
+		"aboutUs":""
+		})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

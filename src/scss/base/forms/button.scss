@@ -1,0 +1,32 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(20) rem(30);
+	min-height: rem(60);
+	min-width: rem(300);
+	font-family: "Merriweather";
+	font-size: rem(22);
+	line-height: math.div(14px, 22px) * 100%;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.61);
+	border: rem(2) solid rgba(255, 255, 255, 0.5);
+	border-radius: rem(11);
+	transition: border 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			border: rem(2) solid $white;
+		}
+	}
+	&._fw {
+		width: 100%;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(10) rem(30);
+		min-height: rem(50);
+		font-size: rem(18);
+	}
+}

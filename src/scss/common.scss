@@ -1,0 +1,39 @@
+// Заголовки, общие БЄМ блоки и проче...
+.social {
+	display: flex;
+	align-items: center;
+	column-gap: rem(50);
+	// .social__link
+	&__link {
+		border: rem(2) solid transparent;
+		border-radius: 50%;
+		flex: 0 0 rem(51);
+		width: rem(51);
+		height: rem(51);
+		transition: border 0.3s ease 0s;
+		&:last-child {
+			img {
+				transform: scale(0.9);
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(2) solid $white;
+			}
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
+
+.title-h1 {
+	font-family: "Merriweather";
+	@include adaptiveValue("font-size", 36, 24);
+	line-height: 1.1;
+	text-align: center;
+	letter-spacing: rem(3);
+	font-weight: 400;
+}

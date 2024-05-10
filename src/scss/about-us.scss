@@ -1,0 +1,202 @@
+.page {
+	// .page__about-us-page
+	&__about-us-page {
+	}
+	// .page__delivery
+	&__delivery {
+	}
+}
+.about-us-page {
+	@extend .gallery;
+	// .about-us__container-header
+	&__container-header {
+	}
+	// .about-us__header
+	&__header {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 35);
+		}
+	}
+	// .about-us__title
+	&__title {
+		font-weight: 400;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 10);
+		}
+	}
+	// .about-us__description
+	&__description {
+		font-family: "Merriweather";
+		@include adaptiveValue("font-size", 15, 14);
+		line-height: math.div(25px, 15px) * 100%;
+		letter-spacing: rem(3);
+	}
+	// .about-us__block
+	&__block {
+	}
+}
+.block-about {
+	display: grid;
+	grid-template-columns: 1fr 40.7%;
+	@include adaptiveValue("gap", 122, 30, 0, 1440, 768);
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+	// .block-about__content
+	&__content {
+		@include adaptiveValue("padding-left", 56, 0, 0, 1440, 992);
+
+		@include adaptiveValue("padding-top", 24, 0, 0, 1440, 992);
+		@include adaptiveValue("padding-bottom", 24, 0, 0, 1440, 992);
+		@media (max-width: $mobile) {
+			order: 2;
+		}
+	}
+	// .block-about__logo
+	&__logo {
+		img {
+			max-width: 100%;
+		}
+	}
+	// .block-about__info
+	&__info {
+	}
+	// .block-about__pictures
+	&__pictures {
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
+}
+.info-block-about {
+	display: grid;
+	row-gap: rem(10);
+	max-width: rem(356);
+	// .info-block-about__caption
+	&__caption {
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(26px, 20px) * 100%;
+		letter-spacing: rem(3);
+		text-transform: capitalize;
+	}
+	// .info-block-about__link
+	&__link {
+		@extend .info-block-about__address;
+		text-decoration: underline;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $active;
+			}
+		}
+	}
+	// .info-block-about__address
+	&__address {
+		@include adaptiveValue("font-size", 17, 15);
+		line-height: math.div(22px, 17px) * 100%;
+		letter-spacing: rem(3);
+	}
+	// .info-block-about__instagram
+	&__instagram {
+		text-transform: uppercase;
+		@extend .info-block-about__address;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: radial-gradient(
+				41.62% 454.37% at 33.33% 143.18%,
+				#e0d600 0%,
+				#ff6930 44.06%,
+				#fe3b36 76.35%,
+				rgba(254, 59, 54, 0) 100%
+			),
+			radial-gradient(50% 50% at 50% 50%, #ff1b90 0%, #f80261 30%, #ed00c0 53.96%, #c500ed 81.56%, #7017ff 100%);
+	}
+	// .info-block-about__facebook
+	&__facebook {
+		text-transform: uppercase;
+		@extend .info-block-about__address;
+		color: $blue;
+	}
+}
+.pictures-about {
+	position: relative;
+	padding-top: rem(32);
+	// .pictures-about__image-ibg
+	&__image-ibg {
+		// max-width: rem(400);
+		// @include adaptiveValue("max-width", 400, 250);
+		width: 83.4%;
+		border: rem(1) solid $white;
+		padding-bottom: 125%;
+
+		&:nth-child(1) {
+			position: relative;
+			z-index: 1;
+		}
+		&:nth-child(2) {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		@media (max-width: $mobile) {
+			padding-bottom: 100%;
+		}
+	}
+}
+//=================================
+.delivery {
+	@include adaptiveValue("margin-bottom", 50, 35);
+	// .delivery__header
+	&__header {
+		text-align: center;
+		max-width: rem(1130);
+		margin: 0px auto;
+		padding: 0 rem(15);
+		@include adaptiveValue("margin-bottom", 77, 35);
+	}
+	// .delivery__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 38, 32);
+		}
+	}
+	// .delivery__description
+	&__description {
+		@include adaptiveValue("font-size", 16, 15);
+		line-height: math.div(32px, 16px) * 100%;
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(5);
+			}
+			a {
+				text-decoration: underline;
+				transition: color 0.3s ease 0s;
+				@media (any-hover: hover) {
+					&:hover {
+						color: $active;
+					}
+				}
+			}
+		}
+	}
+	// .delivery__map
+	&__map {
+		padding-bottom: 43.5%;
+		margin: 0px 15px;
+		@media (max-width: $mobile) {
+			padding-bottom: 60%;
+		}
+		@media (max-width: $mobileSmall) {
+			padding-bottom: 80%;
+		}
+	}
+}
+.map {
+	.gm-fullscreen-control,
+	.gm-svpc,
+	.gm-control-active,
+	.gmnoprint {
+		display: none !important;
+	}
+}

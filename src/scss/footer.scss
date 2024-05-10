@@ -1,0 +1,147 @@
+//====================================================================================================
+.footer {
+	background-color: $footer;
+	@include adaptiveValue("padding-top", 46, 30);
+	@include adaptiveValue("padding-bottom", 90, 30);
+	// .footer__container-about
+	&__container-about {
+		display: grid;
+		grid-template-columns: 1fr minmax(rem(116), auto) 1fr;
+		@include adaptiveValue("column-gap", 144, 40, 0, 1440, 992);
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			@include adaptiveValue("row-gap", 30, 25, 0, 992, 320);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .footer__about
+	&__about {
+	}
+	// .footer__logo
+	&__logo {
+		display: inline-block;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		&._no-active {
+			pointer-events: none;
+		}
+	}
+	// .footer__desctription
+	&__desctription {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 17, 15);
+		line-height: math.div(22px, 17px) * 100%;
+		letter-spacing: rem(3);
+		p {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 24, 14);
+			}
+		}
+	}
+	// .footer__menu
+	&__menu {
+	}
+	// .footer__info
+	&__info {
+	}
+}
+.menu-footer {
+	text-align: center;
+	@media (max-width: $mobile) {
+		text-align: left;
+	}
+	// .menu-footer__list
+	&__list {
+		display: grid;
+		gap: rem(5);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("gap", 10, 5, 0, 992, 320);
+		}
+	}
+	// .menu-footer__item
+	&__item {
+	}
+	// .menu-footer__link
+	&__link {
+		font-size: rem(20);
+		line-height: math.div(32px, 20px) * 100%;
+		transition: color 0.3s ease 0s;
+		text-transform: uppercase;
+		&.active {
+			color: $active;
+			pointer-events: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $active-opacity;
+			}
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("font-size", 24, 20, 0, 992, 768);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("font-size", 20, 16, 0, 768, 320);
+		}
+	}
+}
+.info-footer {
+	text-align: right;
+	@media (max-width: $tablet) {
+		text-align: left;
+	}
+	// .info-footer__item
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 20);
+		}
+	}
+	// .info-footer__label
+	&__label {
+		font-weight: 700;
+		font-size: rem(20);
+		@include adaptiveValue("font-size", 20, 18);
+		line-height: math.div(26px, 20px) * 100%;
+		letter-spacing: rem(3);
+		text-transform: capitalize;
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .info-footer__link
+	&__link {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 17, 15);
+		line-height: math.div(22px, 17px) * 100%;
+		letter-spacing: rem(3);
+		text-decoration-line: underline;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $active-opacity;
+			}
+		}
+	}
+	// .info-footer__address
+	&__address {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 17, 15);
+		line-height: math.div(22px, 17px) * 100%;
+		letter-spacing: rem(3);
+	}
+	// .info-footer__social
+	&__social {
+		justify-content: flex-end;
+		@media (max-width: $tablet) {
+			justify-content: flex-start;
+		}
+	}
+}
+
+//====================================================================================================

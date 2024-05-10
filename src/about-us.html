@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/_head.htm',{
+"title":"Про нас"
+})
+
+<body>
+	<div id="preloader">
+		<span id="loader"></span>
+	</div>
+	<div class="wrapper ">
+		@@include('html/_header.htm',{
+		"home":"",
+		"main":"",
+		"gallery":"",
+		"menu":"",
+		"aboutUs":"active"
+		})
+		<main class="page page_about-us-page">
+			<section class="page__about-us-page about-us-page">
+				<div class="about-us-page__container-header">
+					<div class="about-us-page__header">
+						<h1 class="about-us-page__title title-h1">ПРО НАС</h1>
+						<div class="about-us-page__description">Honey - це повноцінна ресторанна сім'я, яка радо приймає кожного гостя, уважно ставиться до його побажань і робить його перебування в ресторані максимально комфортним. Кожен член нашої команди - це фахівець вищого класу, перевірений часом. Кожен співробітник - це важлива ланка в роботі потужного ресторанного механізму.</div>
+					</div>
+					<div class="about-us-page__block block-about">
+						<div class="block-about__content">
+							<div class="block-about__logo">
+								<img src="@img/logo-big.png" alt="big logo">
+							</div>
+							<ul class="block-about__info info-block-about">
+								<li>
+									<div class="info-block-about__caption">Ресторан HONEY</div>
+								</li>
+								<li><a href="tel:+380666960006" class="info-block-about__link">+38 066 696 00 06</a></li>
+								<li><a href="mailto:honey.uzhgorod@gmail.com" class="info-block-about__link">honey.uzhgorod@gmail.com</a></li>
+								<li>
+									<div class="info-block-about__address">м. Ужгород, вул. Капушанська(Перемоги), 59</div>
+								</li>
+								<li><a href="#" class="info-block-about__instagram">INSTAGRAM</a></li>
+								<li><a href="#" class="info-block-about__facebook">FACEBOOK</a></li>
+							</ul>
+						</div>
+						<div class="block-about__pictures pictures-about">
+							<div class="pictures-about__image-ibg"><img src="@img/about-us-page/01.jpg" alt="main image"></div>
+							<div class="pictures-about__image-ibg"><img src="@img/about-us-page/02.jpg" alt="image"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__delivery delivery">
+				<div class="delivery__header">
+					<h2 class="delivery__title title-h1">ДОСАВКА HONEY</h2>
+					<div class="delivery__description">
+						<p>Для того щоб замовити доставку, просто оберіть страви в меню і зателефонуйте за номером <a href="tel:+380666960006">+38 066 696 00 06</a></p>
+						<p>Ми запропонуємо найкращий варіант доставки та розрахунку</p>
+					</div>
+				</div>
+				<div id="map" class="delivery__map map"></div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{
+		"home":"",
+		"main":"",
+		"gallery":"",
+		"menu":"",
+		"aboutUs":"active"
+		})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

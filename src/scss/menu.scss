@@ -1,0 +1,488 @@
+.page {
+	// .page__menu
+	&__menu {
+	}
+}
+
+.honey-menu {
+	@extend .gallery;
+
+	// .honey-menu__container
+	&__container {
+	}
+	// .honey-menu__header
+	&__header {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 74, 35);
+		}
+	}
+	// .honey-menu__title
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 27, 15);
+		}
+	}
+	// .honey-menu__subtitle
+	&__subtitle {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 25, 18);
+		line-height: math.div(32px, 25px) * 100%;
+		text-align: center;
+	}
+	// .honey-menu__body
+	&__body {
+	}
+}
+
+.body-honey-menu {
+	display: grid;
+	grid-template-columns: rem(290) 1fr;
+	column-gap: rem(30);
+	align-items: start;
+	transition: all 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	@media (max-width: $tablet) {
+		grid-template-columns: rem(320) 100%;
+		position: relative;
+		left: rem(-350);
+		.submenu-open & {
+			left: 0;
+		}
+	}
+	@media (max-width: $mobile) {
+		grid-template-columns: rem(270) 100%;
+		left: rem(-285);
+		column-gap: rem(15);
+		.submenu-open & {
+			left: 0;
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: rem(220) 100%;
+		left: rem(-235);
+		column-gap: rem(15);
+		.submenu-open & {
+			left: 0;
+		}
+	}
+	// .body-honey-menu__navigation
+	&__navigation {
+	}
+	// .body-honey-menu__content
+	&__content {
+	}
+}
+.navigation-menu {
+	// .navigation-menu__group
+	&__group {
+	}
+}
+.group-nav-menu {
+	display: grid;
+	@include adaptiveValue("gap", 60, 35);
+	@media (max-width: $tablet) {
+		position: relative;
+		background-color: $header;
+		padding: rem(15);
+		border-radius: rem(10);
+	}
+
+	// .group-nav-menu__item
+	&__item {
+	}
+
+	// .group-nav-menu__label
+	&__label {
+		position: relative;
+		font-weight: 700;
+		text-decoration: underline;
+		@include adaptiveValue("font-size", 30, 16);
+		line-height: math.div(32px, 30px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+	}
+	// .group-nav-menu__list
+	&__list {
+	}
+	// .group-nav-menu__item
+	&__item {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 28, 14);
+		}
+	}
+	// .group-nav-menu__link
+	&__link {
+		font-weight: 500;
+		@include adaptiveValue("font-size", 25, 14);
+		line-height: math.div(32px, 25px) * 100%;
+		display: inline-block;
+		transition: color 0.3s ease 0s;
+		&.active {
+			color: $active;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $active-opacity;
+			}
+		}
+	}
+}
+
+.content-menu {
+	@media (max-width: $tablet) {
+		position: relative;
+
+		&._hide {
+			.content-menu__button-fix {
+				display: flex;
+			}
+			.content-menu__button {
+				opacity: 0;
+			}
+		}
+	}
+	// .content-menu__line
+	&__line {
+		&._watcher-view {
+			.button-up {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+	// .content-menu__button
+	&__button {
+		display: none;
+		@media (max-width: $tablet) {
+			opacity: 1;
+			border-radius: rem(10);
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: rem(15);
+			padding: rem(15);
+			width: 100%;
+			font-size: rem(15);
+			@include adaptiveValue("font-size", 22, 15, 0, 992, 320);
+			min-height: rem(45);
+			background-color: $header;
+			align-self: center;
+			text-transform: uppercase;
+			font-weight: 700;
+			cursor: pointer;
+			z-index: 10;
+			.content-menu__span {
+				position: relative;
+				width: rem(30);
+				height: rem(18);
+				z-index: 11;
+				span {
+					left: 0;
+					position: absolute;
+					width: 100%;
+					height: rem(2);
+					background-color: $white;
+					top: calc(50% - rem(1));
+				}
+				&::before,
+				&::after {
+					content: "";
+					transition: all 0.3s ease 0s;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					height: rem(2);
+					background-color: $white;
+				}
+				&::before {
+					top: 0;
+					transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+						transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+				}
+				&::after {
+					bottom: 0;
+					transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+						transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+				}
+			}
+			.submenu-open & {
+				.content-menu__span {
+					span {
+						width: 0;
+					}
+					&::before {
+						top: calc(50% - rem(1));
+						transform: rotate(-45deg);
+						transition: top 500ms cubic-bezier(0.23, 1, 0.32, 1),
+							transform 500ms 500ms cubic-bezier(0.23, 1, 0.32, 1);
+					}
+					&::after {
+						bottom: calc(50% - rem(1));
+						transform: rotate(45deg);
+						transition: bottom 500ms cubic-bezier(0.23, 1, 0.32, 1),
+							transform 500ms 500ms cubic-bezier(0.23, 1, 0.32, 1);
+					}
+				}
+			}
+		}
+	}
+	&__button-fix {
+		display: none;
+		@media (max-width: $tablet) {
+			top: rem(114);
+			border-radius: rem(10);
+			position: fixed;
+			// display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			align-items: center;
+			gap: rem(15);
+			padding: rem(15);
+			width: calc(100% - rem(30));
+			font-size: rem(15);
+			@include adaptiveValue("font-size", 22, 15, 0, 992, 320);
+			min-height: rem(45);
+			background-color: $header;
+			align-self: center;
+			text-transform: uppercase;
+			font-weight: 700;
+			cursor: pointer;
+			z-index: 10;
+			.content-menu__span {
+				position: relative;
+				width: rem(30);
+				height: rem(18);
+				z-index: 11;
+				span {
+					left: 0;
+					position: absolute;
+					width: 100%;
+					height: rem(2);
+					background-color: $white;
+					top: calc(50% - rem(1));
+				}
+				&::before,
+				&::after {
+					content: "";
+					transition: all 0.3s ease 0s;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					height: rem(2);
+					background-color: $white;
+				}
+				&::before {
+					top: 0;
+					transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+						transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+				}
+				&::after {
+					bottom: 0;
+					transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+						transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+				}
+			}
+			.submenu-open & {
+				.content-menu__span {
+					span {
+						width: 0;
+					}
+					&::before {
+						top: calc(50% - rem(1));
+						transform: rotate(-45deg);
+						transition: top 500ms cubic-bezier(0.23, 1, 0.32, 1),
+							transform 500ms 500ms cubic-bezier(0.23, 1, 0.32, 1);
+					}
+					&::after {
+						bottom: calc(50% - rem(1));
+						transform: rotate(45deg);
+						transition: bottom 500ms cubic-bezier(0.23, 1, 0.32, 1),
+							transform 500ms 500ms cubic-bezier(0.23, 1, 0.32, 1);
+					}
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			top: rem(90);
+		}
+	}
+	// .content-menu__wrapper
+	&__wrapper {
+		display: grid;
+		position: relative;
+		@include adaptiveValue("gap", 50, 35);
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: $black;
+			transition: all 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+			opacity: 0;
+			visibility: hidden;
+		}
+		.submenu-open & {
+			&::after {
+				content: "";
+				opacity: 0.6;
+				visibility: visible;
+			}
+		}
+		@media (max-width: $tablet) {
+			margin-top: rem(20);
+		}
+	}
+	// .content-menu__category
+	&__category {
+	}
+}
+
+.category-menu {
+	// .category-menu__title
+	&__title {
+		@extend .group-nav-menu__label;
+		@include adaptiveValue("font-size", 31, 22);
+		text-decoration: none;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 15);
+		}
+	}
+
+	// .category-menu__items
+	&__items {
+		background-color: rgba(202, 202, 202, 0.11);
+		border: rem(1) solid rgba(255, 255, 255, 0.7);
+		@include adaptiveValue("border-radius", 32, 15);
+		overflow: hidden;
+	}
+	// .category-menu__item
+	&__item {
+		&:not(:last-child) {
+			border-bottom: rem(1) solid rgba(255, 255, 255, 0.7);
+		}
+	}
+}
+.button-up {
+	position: fixed;
+	bottom: rem(55);
+	right: rem(45);
+	z-index: 15;
+	transition: all 0.5s ease 0s;
+	img {
+		transform: rotate(-180deg);
+		width: rem(60);
+		height: rem(60);
+	}
+	@media (min-width: $tablet) {
+		display: none;
+	}
+	@media (max-width: $mobile) {
+		bottom: rem(45);
+		right: rem(45);
+		img {
+			width: rem(50);
+			height: rem(50);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		bottom: rem(35);
+		right: rem(25);
+	}
+}
+.item-category-menu {
+	@include adaptiveValue("padding-right", 40, 10);
+	@include adaptiveValue("padding-left", 40, 10);
+	padding-top: rem(15);
+	padding-bottom: rem(15);
+	display: flex;
+	align-items: flex-start;
+	@include adaptiveValue("column-gap", 50, 20);
+	@media (max-width: $mobileSmall) {
+		flex-direction: column-reverse;
+		row-gap: rem(20);
+	}
+	// .item-category-menu__content
+	&__content {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-self: stretch;
+		@include adaptiveValue("padding-top", 40, 10);
+		@include adaptiveValue("padding-bottom", 40, 0);
+	}
+	// .item-category-menu__info
+	&__info {
+		flex: 1 1 auto;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 18, 12);
+		}
+	}
+	// .item-category-menu__label
+	&__label {
+		font-weight: 700;
+		@include adaptiveValue("font-size", 25, 20);
+		transition: color 0.5s ease 0s;
+		line-height: math.div(32px, 25px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 18, 12);
+		}
+	}
+	// .item-category-menu__description
+	&__description {
+		transition: color 0.5s ease 0s;
+		@include adaptiveValue("font-size", 15, 14);
+		line-height: math.div(23px, 15px) * 100%;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 18, 12);
+		}
+	}
+	// .item-category-menu__weigth
+	&__weigth {
+		transition: color 0.5s ease 0s;
+		@include adaptiveValue("font-size", 15, 14);
+		line-height: math.div(32px, 15px) * 100%;
+	}
+	// .item-category-menu__price
+	&__price {
+		font-size: rem(15);
+		line-height: math.div(32px, 15px) * 100%;
+		transition: color 0.5s ease 0s;
+	}
+	// .item-category-menu__image-ibg
+	&__image-ibg {
+		flex: 0 0 32%;
+		overflow: hidden;
+		padding-bottom: 47%;
+		@include adaptiveValue("border-radius", 32, 15);
+		img {
+			transform: scale(1.01);
+
+			transition: transform 0.7s ease 0s;
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 38%;
+		}
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 auto;
+			width: 100%;
+			padding-bottom: 80%;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.item-category-menu__label {
+				color: $active;
+			}
+			.item-category-menu__image-ibg {
+				img {
+					transform: scale(1.06);
+				}
+			}
+		}
+	}
+}

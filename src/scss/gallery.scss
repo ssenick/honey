@@ -1,0 +1,114 @@
+.page {
+	// .page__gallery
+	&__gallery {
+	}
+}
+.gallery {
+	@include adaptiveValue("padding-top", 260, 160);
+
+	@include adaptiveValue("padding-bottom", 85, 40);
+	// .gallery__title
+	&__title {
+
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 56, 35);
+		}
+	}
+	// .gallery__links
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: rem(25);
+		row-gap: rem(15);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 56, 35);
+		}
+	}
+	// .gallery__link
+	&__link {
+		display: inline-flex;
+		@include adaptiveValue("min-height", 48, 40);
+		justify-content: center;
+		align-items: center;
+		font-size: rem(16);
+		line-height: 1.1;
+		text-align: center;
+		color: $black;
+		background-color: $greyD9;
+		transition: all 0.3s ease 0s;
+		padding: rem(10) rem(22);
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $active-opacity;
+				color: $white;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+	// .gallery__block
+	&__block {
+	}
+}
+.block-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	@include adaptiveValue("gap", 40, 12);
+	@media (max-width: $mobile) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	// .block-gallery__image
+	&__image {
+		position: relative;
+		padding-bottom: percent(481, 320);
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(90);
+			height: rem(90);
+			border-radius: rem(50);
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: $greyD9 url("@img/icons/loupe.svg") center center / 50% no-repeat;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.5s ease 0s;
+			z-index: 2;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			border: rem(3) solid rgba(255, 255, 255, 0.5);
+			transition: all 0.5s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					border: rem(5) solid $white;
+					background-color: rgba(0, 0, 0, 0.82);
+				}
+				&::after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+}
